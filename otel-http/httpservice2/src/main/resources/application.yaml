@@ -10,9 +10,10 @@ spring:
           endpoint: http://localhost:4317/v1/traces
 
 server:
-  port: 8081
+  port: 8085
 
 logging:
+  path: /Users/puneet.dewan/Code/zendesk/distributed-tracing-demo/otel-http/pd.log
   level:
     org.springframework.cloud.sleuth: DEBUG
     io.opentelemetry: DEBUG

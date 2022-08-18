@@ -11,10 +11,10 @@ spring:
 
 
 server:
-  port: 8080
+  port: 8086
 
 logging:
-#  file: /Users/sai.charan/spring-boot-tracing-demo/otel-http/app.log
+  path: /Users/puneet.dewan/Code/zendesk/distributed-tracing-demo/otel-http/pd.log
   level:
     org.springframework.cloud.sleuth: DEBUG
     io.opentelemetry: DEBUG
