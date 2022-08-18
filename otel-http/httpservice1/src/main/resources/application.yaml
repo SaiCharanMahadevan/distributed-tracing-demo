@@ -1,11 +1,20 @@
 spring:
   application:
     name: "http-service1"
+  sleuth:
+    otel:
+      config:
+        trace-id-ratio-based: 1.0
+      exporter:
+        otlp:
+          endpoint: http://localhost:4317/v1/traces
+
 
 server:
   port: 8080
 
 logging:
+#  file: /Users/sai.charan/spring-boot-tracing-demo/otel-http/app.log
   level:
     org.springframework.cloud.sleuth: DEBUG
     io.opentelemetry: DEBUG

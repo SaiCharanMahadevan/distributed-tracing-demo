@@ -21,4 +21,10 @@ public class HomeController {
         log.info("Hit service 1");
         return this.restTemplate.getForObject("http://localhost:8081", String.class);
     }
+
+    @RequestMapping("/test")
+    String service1a() {
+        log.info("Hit service 1a");
+        return this.restTemplate.getForObject("http://localhost:8081/test", String.class);
+    }
 }

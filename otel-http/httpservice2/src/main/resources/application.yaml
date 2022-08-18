@@ -1,6 +1,18 @@
 spring:
   application:
     name: "http-service2"
+  sleuth:
+    otel:
+      config:
+        trace-id-ratio-based: 1.0
+      exporter:
+        otlp:
+          endpoint: http://localhost:4317/v1/traces
 
 server:
   port: 8081
+
+logging:
+  level:
+    org.springframework.cloud.sleuth: DEBUG
+    io.opentelemetry: DEBUG

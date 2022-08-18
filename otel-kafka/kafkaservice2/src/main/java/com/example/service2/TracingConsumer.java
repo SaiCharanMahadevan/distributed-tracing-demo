@@ -27,7 +27,7 @@ public class TracingConsumer {
         this.commitService = commitService;
     }
 
-    @KafkaListener(topics = "tracing-demo")
+    @KafkaListener(topics = "tracing-demo", groupId = "")
     public void listen(@Payload String message, ConsumerRecord<String, String> record) {
         long now = System.currentTimeMillis();
         Span.Builder spanBuilder = this.propagator.extract(record, new TracingKafkaPropagatorGetter());

@@ -22,4 +22,11 @@ public class HomeController {
         log.info(commitMsg);
         return commitMsg;
     }
+
+    @RequestMapping("/test")
+    String service2a() {
+        String commitMsg = this.restTemplate.getForObject("http://whatthecommit.com/index.txt", String.class);
+        log.info(commitMsg);
+        return commitMsg;
+    }
 }

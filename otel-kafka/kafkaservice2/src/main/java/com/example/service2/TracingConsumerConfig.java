@@ -28,6 +28,7 @@ public class TracingConsumerConfig {
 
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, Serdes.String().deserializer().getClass().getName());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, Serdes.String().deserializer().getClass().getName());
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "com.example.tracing-demo-consumer");
 
         return props;
     }
